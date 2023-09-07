@@ -31,6 +31,19 @@ class relu:
     def activation_function_derivative(x):
         return (x > 0) * 1
         
+class leaky_relu:
+    def activation_function(x):
+        if x>=0:
+            return x
+        else:
+            return 0.1 * x
+    def activation_function_derivative(x):
+        if x>=0:
+            return 1
+        else:
+            return 0.1
+        
+
 class softmax:
     def activation_function(x):
         tmp = np.exp(x - x.max())

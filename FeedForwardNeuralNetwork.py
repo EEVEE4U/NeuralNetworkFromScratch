@@ -23,6 +23,8 @@ class newClassifier:
 
         if activation == 'relu':
             self.layers.append(layers.ActivationLayer(functions.relu))
+        elif activation == 'relu':
+            self.layers.append(layers.ActivationLayer(functions.leaky_relu))
         elif activation == 'softmax':
             self.layers.append(layers.ActivationLayer(functions.softmax))
         elif activation == 'tanh':
